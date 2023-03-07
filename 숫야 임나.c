@@ -24,20 +24,20 @@ int main() {
 		}
 
 	}
-	printf("ìˆ«ì 3ê°œë¥¼ ì…ë ¥í•˜ì—¬ ìˆ«ìì•¼êµ¬ê²Œì„ì„ í•´ë³´ì‹œì˜¤!");
+	printf("¼ıÀÚ 3°³¸¦ ÀÔ·ÂÇÏ¿© ¼ıÀÚ¾ß±¸°ÔÀÓÀ» ÇØº¸½Ã¿À!");
 
 	while (1) {
 		scanf("%1d %1d %1d", &user[0], &user[1], &user[2]);
 		if (user[0] < 0 || user[0] > 9 || user[1] < 0 || user[1] > 9 || user[2] < 0 || user[2] > 9) {
-			printf("0~9ê¹Œì§€ì˜ ìˆ«ìë¥¼ í•˜ë‚˜ë§Œ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
+			printf("0~9±îÁöÀÇ ¼ıÀÚ¸¦ ÇÏ³ª¸¸ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
 			continue;
 		}
 		else if (user[0] == user[1] || user[1] == user[2] || user[2] == user[0]) {
-			printf("ì¤‘ë³µëœ ìˆ«ìì…ë‹ˆë‹¤");
+			printf("Áßº¹µÈ ¼ıÀÚÀÔ´Ï´Ù");
 			continue;
 		}
 		else if (user[0] == user[1] && user[1] == user[2] && user[2] == user[0]) {
-			printf("ìˆ«ì ì„¸ê°œê°€ ì „ë¶€ ë˜‘ê°™ì€ìˆ˜ì…ë‹ˆë‹¤. ë‹¤ë¥¸ê±¸ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+			printf("¼ıÀÚ ¼¼°³°¡ ÀüºÎ ¶È°°Àº¼öÀÔ´Ï´Ù. ´Ù¸¥°É ÀÔ·ÂÇØÁÖ¼¼¿ä.");
 			continue;
 		}
 		break;
@@ -45,7 +45,7 @@ int main() {
 
 
 
-	
+
 	int strike = 0, ball = 0;
 	for (i = 0; i < 3; i++)
 	{
@@ -53,35 +53,53 @@ int main() {
 		{
 
 			if (computer[i] == user[j]) {
-				if (i == j)
+				if (i == j) {
 					strike++;
+				}
 				else {
 					ball++;
 				}
 			}
 
 		}
-		printf("%d %d %dëŠ” %dìŠ¤íŠ¸ë¼ì´í¬ %dë³¼ì…ë‹ˆë‹¤.", user[0], user[1], user[2], strike, ball);
+		printf("%d %d %d´Â %d½ºÆ®¶óÀÌÅ© %dº¼ÀÔ´Ï´Ù.", user[0], user[1], user[2], strike, ball);
 	}
-	
-	}
-	
 
-
-
-	int count = 0; // ì‹œë„í•˜ëŠ” íšŸìˆ˜.ì˜¬ë¼ê°€ëŠ” íšŸìˆ˜.
-	for(count = 0; count < 11; count++) {
+	int count = 1; // ½ÃµµÇÏ´Â È½¼ö.¿Ã¶ó°¡´Â È½¼ö.
+	for (count = 1; count < 11; count++) {
 		if (strike == 3) {
-			printf("ì œí•œ íšŸìˆ˜ë‚´ì— ê²Œì„ì„ í´ë¦¬ì–´í–ˆìŠµë‹ˆë‹¤!");
+			printf("Á¦ÇÑ È½¼ö³»¿¡ °ÔÀÓÀ» Å¬¸®¾îÇß½À´Ï´Ù!");
 			break;
 		}
 		else if (count == 10) {
-			printf("ê²Œì„ í´ë¦¬ì–´ ì‹¤íŒ¨,íšŸìˆ˜ì´ˆê³¼, ì •ë‹µì€ %d %d %d", computer[0], computer[1], computer[2]);
+			printf("°ÔÀÓ Å¬¸®¾î ½ÇÆĞ,È½¼öÃÊ°ú, Á¤´äÀº %d %d %d", computer[0], computer[1], computer[2]);
 			break;
 		}
-		break;
-	}
 
 
 }
-// ì•„ì§ ì¹´ìš´íŠ¸ìª½ì„ ì¶”ê°€í•˜ì§€ ëª»í–ˆìŒ.ì¹´ìš´íŠ¸ë¥¼ ë„£ì–´ì•¼í•˜ê³  ëª‡ë²ˆ ë‚¨ì•˜ëŠ”ì§€ë„ ë„£ì–´ì•¼í•¨.
+
+
+
+
+
+
+
+
+
+
+//int count = 1;
+//	  // ½ÃµµÇÏ´Â È½¼ö.¿Ã¶ó°¡´Â È½¼ö.
+//	for(count = 1; count < 11; count++) {
+//		if (strike == 3) {
+//			printf("Á¦ÇÑ È½¼ö³»¿¡ °ÔÀÓÀ» Å¬¸®¾îÇß½À´Ï´Ù!");
+//			break;
+//		}
+//		else if (count == 10) {
+//			printf("°ÔÀÓ Å¬¸®¾î ½ÇÆĞ,È½¼öÃÊ°ú, Á¤´äÀº %d %d %d", computer[0], computer[1], computer[2]);
+//			break;
+//		}
+//		break;
+//	}
+
+
